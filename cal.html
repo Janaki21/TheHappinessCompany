@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dopamine Level Test</title>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color:#150A02;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            margin: 40px;
+        }
+
+        form {
+            max-width: 400px;
+            width: 100%;
+            padding: 20px;
+            box-sizing: border-box;
+            background-color: #150A02;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+
+        label {
+            display: block;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+
+        input,
+        select {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 16px;
+            box-sizing: border-box;
+            border: 1px solid #f1f0ef;
+            border-radius: 4px;
+            background-color:#150A02;
+            color: white;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #0855a3;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        #header{
+            color: white;
+            padding-left: 120px;
+        }
+        #content{
+            background-color: #150A02;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            margin: 40px;
+        }
+    </style>
+</head>
+
+<body>
+    <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
+    <div id="content">
+    <div id = "header">
+        <h1 style="text-align: center;">Dopamine Level Test</h1>
+
+    </div>
+    <form id="dopamineForm">
+        <label for="exerciseFrequency">Exercise Frequency (days per week):</label>
+        <input type="number" id="exerciseFrequency" required>
+
+        <label for="sleepQuality">Sleep Quality:</label>
+        <select id="sleepQuality" required>
+            <option value="Excellent">Excellent</option>
+            <option value="Good">Good</option>
+            <option value="Fair">Fair</option>
+            <option value="Poor">Poor</option>
+        </select>
+
+        <label>Favorite Activities:</label>
+        <div>
+            <input type="checkbox" id="activityExercise" value="Exercise"> <label for="activityExercise">Exercise</label>
+            <input type="checkbox" id="activityReading" value="Reading"> <label for="activityReading">Reading</label>
+            <!-- Add more favorite activities checkboxes as needed -->
+        </div>
+
+        <!-- Add more questions as needed -->
+
+        <label for="socializingFrequency">Socializing Frequency (days per week):</label>
+        <input type="number" id="socializingFrequency" required>
+
+        <label for="screenTime">Screen Time (hours per day):</label>
+        <input type="number" id="screenTime" required>
+
+        <label for="stressLevel">Stress Level (scale of 1-5):</label>
+        <input type="number" id="stressLevel" min="1" max="5" required>
+
+        <label for="waterIntake">Water Intake (glasses per day):</label>
+        <input type="number" id="waterIntake" required>
+
+        <button type="button" onclick="calculateDopamine()">Calculate Dopamine</button>
+    </form>
+
+    <div id="result"></div>
+    </div>
+
+    <script src="cal.js"></script>
+
+
+</body>
+
+</html>

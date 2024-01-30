@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detox</title>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color:#150A02;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            margin: 40px;
+        }
+
+        form {
+            max-width: 400px;
+            width: 100%;
+            padding: 20px;
+            box-sizing: border-box;
+            background-color: #150A02;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+
+        label {
+            display: block;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+
+        input,
+        select {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 16px;
+            box-sizing: border-box;
+            border: 1px solid #f1f0ef;
+            border-radius: 4px;
+            background-color:#150A02;
+            color: white;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #0855a3;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        #header{
+            color: white;
+            padding-left: 120px;
+        }
+        #content{
+            background-color: #150A02;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            margin: 40px;
+        }
+    </style>
+</head>
+<body>
+    <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
+    <div id="content">
+    <div id = "header">
+        <h1 style="text-align: center;">Dopamine Level Test</h1>
+
+    </div>
+    <form id="dopamineForm">
+        <label for="socialMediaType">What social medias do you use:</label>
+        <select id="socialMediaType" required>
+            <option value="SnapChat">SnapChat</option>
+            <option value="Instagram">Instagram</option>
+            <option value="Youtube">Youtube</option>
+            <option value="Other">Other</option>
+
+            
+            
+        </select>
+
+        <label for="purposeLabel">What is your purpose for using social media:</label>
+        <select id="purpose" required>
+            <option value="excellent">Educational</option>
+            <option value="good">Enteriment</option>
+            <option value="good">Bussiness</option>
+            <option value="fair">Motivation</option>
+
+            <option value="poor">Infulencer</option>
+            
+        </select>
+        
+        <label for="screenTime">Screen Time (hours per day):</label>
+        <input type="screenNumber" id="screenTime" required>
+        <button type="button" onclick="calculateDopamine()">Calculate Dopamine</button>
+    </form>
+
+    <div id="result"></div>
+    </div>
+
+    <script src="detox.js"></script>
+
+
+</body>
+
+</html>

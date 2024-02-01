@@ -116,20 +116,20 @@
         <div class="contact-numbers">Email: janakinageshwaran2112@gmail.com</div>
         <div class="line"></div>
         <div class="title-container">
-        <div class="title-1">WELCOME</div>
-        <div class="title-2">THE HAPPINESS COMPANY</div>
+        <div class="title-1">THE HAPPINESS COMPANY</div>
+        <div class="title-2">JOIN US ON OUR DETOX JOURNEY</div>
         </div>
       </div>
       <nav class="header__nav">
-        <RouterLink class="header__nav__link" to="/">
+        <a href ="javascript:void(0)" class="header__nav__link" to="/">
           HOME 
-        </RouterLink>
-        <RouterLink class="header__nav__link" to="/contact">
+        </a>
+        <a href ="javascript:void(0)" class="header__nav__link" to="/contact">
           ABOUT US 
-        </RouterLink>
-        <RouterLink class="header__nav__link" to="/LoginandRegister">
+        </a>
+        <a href ="javascript:void(0)" class="header__nav__link" to="/LoginandRegister">
           Login/Register
-        </RouterLink>
+        </a>
       </nav>
     </header>
     <div class="content">
@@ -196,6 +196,9 @@
       src="https://unpkg.com/@teleporthq/teleport-custom-scripts"
     ></script>
     <style>
+      body{
+        font-family: math;
+      }
       .header__nav{
         text-align: center;
         width: 65%;
@@ -220,7 +223,6 @@
       }
       .banner-img{
         background: radial-gradient(919px at 1.7% 6.1%, rgb(41, 58, 76) 0%, rgb(40, 171, 226) 100.2%);
-    background-image: url(./images/2.jpeg);
     /* width: 100%; */
     /* height: 425px; */
     width: 100%;
@@ -232,16 +234,17 @@
         position: relative;
       }
       .title-1{
-        font-size: 18px;
+        font-size: 35px;
         color: #fff;
       }
       .title-2{
-        font-size: 25px;
+        font-size: 39px;
         color: #fff;
         letter-spacing: 1px;
+        margin-top: 15px;
       }
       .title-container{
-        padding-top: 170px;
+        padding-top: 130px;
         text-align: center;
         letter-spacing: 1px;
       }
@@ -288,7 +291,8 @@
   margin-bottom: 1rem;
   color: #1550bd;
   font-weight: bold;
-  margin-top: -20px;
+  margin-top: 0;
+  margin-bottom: -10px;
 }
 .content__separator {
   border-color: gray;

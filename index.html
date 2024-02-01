@@ -112,18 +112,17 @@
     <link rel="stylesheet" href="./style.css" />
     <header class="header">
       <div class="banner-img">
-        <div class="logo-img">LOGO</div>
-        <div class="contact-numbers">+91-01234567890</div>
+        <div class="logo-img"><img src="./images/logo.png" width="50" height="50"></div>
+        <div class="contact-numbers">Email: janakinageshwaran2112@gmail.com</div>
         <div class="line"></div>
         <div class="title-container">
-        <div class="title-1">SHIPS ANYTHING</div>
-        <div class="title-2">AROUND THE WORLD</div>
-        <button class="btn">BUTTON</button>
+        <div class="title-1">WELCOME</div>
+        <div class="title-2">THE HAPPINESS COMPANY</div>
         </div>
       </div>
       <nav class="header__nav">
         <RouterLink class="header__nav__link" to="/">
-          TRY ME 
+          HOME 
         </RouterLink>
         <RouterLink class="header__nav__link" to="/contact">
           ABOUT US 
@@ -221,8 +220,13 @@
       }
       .banner-img{
         background: radial-gradient(919px at 1.7% 6.1%, rgb(41, 58, 76) 0%, rgb(40, 171, 226) 100.2%);
-        width: 100%;
-        height: 425px;
+    background-image: url(./images/2.jpeg);
+    /* width: 100%; */
+    /* height: 425px; */
+    width: 100%;
+    height: 320px;
+    background-position: center;
+    background-attachment: fixed;
       }
       .header{
         position: relative;
@@ -252,9 +256,6 @@
         color: lightblue;
       }
       .logo-img{
-        width: 143px;
-        height: 50px;
-        border: 1px solid #fff;
         margin: 5px;
         position: absolute;
         text-align: center;
@@ -264,9 +265,11 @@
       }
       .contact-numbers{
         position: absolute;
-          right: 18%;
-          top: 20px;
-          color: #fff;
+    right: 18%;
+    top: 20px;
+    color: #fff;
+    font-size: 10px;
+    font-weight: bold
       }
       .line{
         width: 65%;

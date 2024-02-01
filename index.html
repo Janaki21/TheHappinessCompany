@@ -1,392 +1,455 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <title>THE HAPPINESS COMPANY </title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta charset="utf-8" />
-    <meta property="twitter:card" content="summary_large_image" />
 
-    <style data-tag="reset-style-sheet">
-      html {  line-height: 1.15;}body {  margin: 0;}* {  box-sizing: border-box;  border-width: 0;  border-style: solid;}p,li,ul,pre,div,h1,h2,h3,h4,h5,h6,figure,blockquote,figcaption {  margin: 0;  padding: 0;}button {  background-color: transparent;}button,input,optgroup,select,textarea {  font-family: inherit;  font-size: 100%;  line-height: 1.15;  margin: 0;}button,select {  text-transform: none;}button,[type="button"],[type="reset"],[type="submit"] {  -webkit-appearance: button;}button::-moz-focus-inner,[type="button"]::-moz-focus-inner,[type="reset"]::-moz-focus-inner,[type="submit"]::-moz-focus-inner {  border-style: none;  padding: 0;}button:-moz-focus,[type="button"]:-moz-focus,[type="reset"]:-moz-focus,[type="submit"]:-moz-focus {  outline: 1px dotted ButtonText;}a {  color: inherit;  text-decoration: inherit;}input {  padding: 2px 4px;}img {  display: block;}html { scroll-behavior: smooth  }
-    </style>
-    <style data-tag="default-style-sheet">
-      html {
-        font-family: Inter;
-        font-size: 16px;
+<head>
+  <title>THE HAPPINESS COMPANY </title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="utf-8" />
+  <meta property="twitter:card" content="summary_large_image" />
+  <style>
+    body {
+      font-family: math;
+    }
+
+    html {
+      line-height: 1.15;
+    }
+
+    body {
+      margin: 0;
+    }
+
+    * {
+      box-sizing: border-box;
+      border-width: 0;
+      border-style: solid;
+    }
+
+    html {
+      font-family: Inter;
+      font-size: 16px;
+    }
+
+    body {
+      font-weight: 400;
+      font-style: normal;
+      text-decoration: none;
+      text-transform: none;
+      letter-spacing: normal;
+      line-height: 1.15;
+      color: var(--dl-color-gray-black);
+      background-color: var(--dl-color-gray-white);
+    }
+
+    p,
+    li,
+    ul,
+    pre,
+    div,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    figure,
+    blockquote,
+    figcaption {
+      margin: 0;
+      padding: 0;
+    }
+
+    button {
+      background-color: transparent;
+    }
+
+    button,
+    input,
+    optgroup,
+    select,
+    textarea {
+      font-family: inherit;
+      font-size: 100%;
+      line-height: 1.15;
+      margin: 0;
+    }
+
+    button,
+    select {
+      text-transform: none;
+    }
+
+    button,
+    [type="button"],
+    [type="reset"],
+    [type="submit"] {
+      -webkit-appearance: button;
+    }
+
+    button::-moz-focus-inner,
+    [type="button"]::-moz-focus-inner,
+    [type="reset"]::-moz-focus-inner,
+    [type="submit"]::-moz-focus-inner {
+      border-style: none;
+      padding: 0;
+    }
+
+    button:-moz-focus,
+    [type="button"]:-moz-focus,
+    [type="reset"]:-moz-focus,
+    [type="submit"]:-moz-focus {
+      outline: 1px dotted ButtonText;
+    }
+
+    @keyframes fade-in-left {
+      0% {
+        opacity: 0;
+        transform: translateX(-20px);
       }
 
-      body {
-        font-weight: 400;
-        font-style:normal;
-        text-decoration: none;
-        text-transform: none;
-        letter-spacing: normal;
-        line-height: 1.15;
-        color: var(--dl-color-gray-black);
-        background-color: var(--dl-color-gray-white);
+      100% {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
 
-      }
-    </style>
-    <link
-      rel="stylesheet"
-      href="https://unpkg.com/animate.css@4.1.1/animate.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
-      data-tag="font"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=STIX Two Text"
-      data-tag="font"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Noto Sans"
-      data-tag="font"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
-      data-tag="font"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
-      data-tag="font"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=STIX+Two+Text:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&amp;display=swap"
-      data-tag="font"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=STIX+Two+Text:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&amp;display=swap"
-      data-tag="font"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=STIX+Two+Text:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&amp;display=swap"
-      data-tag="font"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=STIX+Two+Text:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&amp;display=swap"
-      data-tag="font"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap"
-      data-tag="font"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap"
-      data-tag="font"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap"
-      data-tag="font"
-    />
-    <link
-      rel="stylesheet"
-      href="https://unpkg.com/@teleporthq/teleport-custom-scripts/dist/style.css"
-    />
-    <style>
-      @keyframes fade-in-left {
-        0% {
-          opacity: 0;
-          transform: translateX(-20px);
-        }
-        100% {
-          opacity: 1;
-          transform: translateX(0);
-        }
-      }
-    </style>
-  </head>
-  <body>
-    <link rel="stylesheet" href="./style.css" />
-    <header class="header">
-      <div class="banner-img">
-        <div class="logo-img"><img src="./images/logo.png"  height="50"></div>
-        <div class="contact-numbers">Email: janakinageshwaran2112@gmail.com</div>
-        <div class="line"></div>
-        <div class="title-container">
+    a {
+      color: inherit;
+      text-decoration: inherit;
+    }
+
+    input {
+      padding: 2px 4px;
+    }
+
+    img {
+      display: block;
+    }
+
+    html {
+      scroll-behavior: smooth
+    }
+
+    img {
+      width: 100%;
+    }
+
+    .header__nav {
+      text-align: center;
+      width: 65%;
+      z-index: 1;
+      /* background: linear-gradient(109.5deg, rgb(76, 221, 242) 11.2%, rgb(92, 121, 255) 91.1%); */
+      background: linear-gradient(109.5deg, rgb(45 48 48) 11.2%, rgb(57 59 66) 91.1%);
+      position: absolute;
+      top: 89%;
+      left: 19%;
+      height: 90px;
+      line-height: 90px;
+    }
+
+    .header__title {
+      color: goldenrod;
+    }
+
+    .header__nav {
+      display: flex;
+      justify-content: space-evenly;
+    }
+
+    .header__nav__link {
+      text-decoration: none;
+      color: white;
+    }
+
+    .banner-img {
+      /* background: radial-gradient(919px at 1.7% 6.1%, rgb(41, 58, 76) 0%, rgb(40, 171, 226) 100.2%); */
+      background: radial-gradient(919px at 1.7% 6.1%, rgb(49 68 88) 0%, rgb(40 47 50) 100.2%);
+      /* width: 100%; */
+      /* height: 425px; */
+      width: 100%;
+      height: 320px;
+      background-position: center;
+      background-attachment: fixed;
+    }
+
+    .header {
+      position: relative;
+    }
+
+    .title-1 {
+      font-size: 35px;
+      color: #fff;
+    }
+
+    .title-2 {
+      font-size: 39px;
+      color: #fff;
+      letter-spacing: 1px;
+      margin-top: 15px;
+    }
+
+    .title-container {
+      padding-top: 130px;
+      text-align: center;
+      letter-spacing: 1px;
+    }
+
+    .btn {
+      background: #fff;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      padding-left: 50px;
+      padding-right: 50px;
+      margin-top: 16px;
+      border-radius: 50px;
+      color: lightblue;
+    }
+
+    .logo-img {
+      margin: 5px;
+      position: absolute;
+      text-align: center;
+      left: 19%;
+      line-height: 45px;
+      color: #fff;
+    }
+
+    .contact-numbers {
+      position: absolute;
+      right: 18%;
+      top: 20px;
+      color: #fff;
+      font-size: 14px
+    }
+
+    .line {
+      width: 65%;
+      height: 1px;
+      background: #fff;
+      position: absolute;
+      top: 80px;
+      left: 19%;
+      opacity: 0.3;
+    }
+
+    .content {
+      padding: 5rem 9rem;
+    }
+
+    .content__heading {
+      text-align: center;
+      margin-bottom: 1rem;
+      color: #1550bd;
+      font-weight: bold;
+      margin-top: 0;
+      margin-bottom: -10px;
+    }
+
+    .content__separator {
+      border-color: gray;
+      margin-bottom: 1rem;
+    }
+
+    .img-container,
+    .img-text-container {
+      border: 1px solid #ccc;
+      width: 49%;
+      height: 240px;
+      float: left;
+      margin: 5px;
+      text-align: center;
+    }
+
+    .img-text-container p {
+      padding: 30px;
+      text-align: left;
+      font-size: 18px;
+    }
+
+    .cont-container {
+      clear: both;
+    }
+
+    .img-with-text {
+      border: 1px solid #ccc;
+      width: 32.3%;
+      float: left;
+      margin: 5px;
+      text-align: center;
+      height: 495px;
+    }
+
+    .img-with-text2 {
+      border: 6px solid #ebeaea;
+      width: 32.3%;
+      float: left;
+      margin: 5px;
+      text-align: center;
+      height: 285px;
+      padding: 2px;
+    }
+
+    .img-with-text ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    .img-with-text ul li {
+      margin-bottom: 10px;
+      text-align: left;
+      font-size: 14px;
+      padding-left: 20px;
+    }
+
+    .img-with-text h3 {
+      margin-bottom: 10px;
+      font-weight: bold;
+      text-align: left;
+      text-transform: uppercase;
+      font-size: 16px;
+      margin-top: 10px;
+      padding-left: 20px;
+      color: #246ddb;
+    }
+
+    .img-with-text2 h3 {
+      margin-bottom: 10px;
+      font-weight: bold;
+      text-align: left;
+      text-transform: uppercase;
+      font-size: 16px;
+      margin-top: 10px;
+      padding-left: 20px;
+      color: hsl(157, 72%, 50%);
+    }
+
+    .img-with-text2 p {
+      font-size: 17px;
+      text-align: left;
+      padding-left: 20px;
+      color: #fff;
+    }
+
+    .space-top {
+      padding-top: 10px;
+      padding-bottom: 10px;
+    }
+
+    .content-bg {
+      /* background: radial-gradient(919px at 1.7% 6.1%, rgb(41, 58, 76) 0%, rgb(40, 171, 226) 100.2%); */
+      background: radial-gradient(919px at 1.7% 6.1%, rgb(54 54 54) 0%, rgb(14 37 46) 100.2%);
+      height: 350px;
+      padding-top: 25px;
+    }
+
+    .bg-content {
+      padding: 0 9rem;
+    }
+  </style>
+</head>
+
+<body>
+  <header class="header">
+    <div class="banner-img">
+      <div class="logo-img"><img src="./images/logo.png" height="50"></div>
+      <div class="contact-numbers">Email: janakinageshwaran2112@gmail.com</div>
+      <div class="line"></div>
+      <div class="title-container">
         <div class="title-1">THE HAPPINESS COMPANY</div>
         <div class="title-2">JOIN US ON OUR DETOX JOURNEY</div>
-        </div>
       </div>
-      <nav class="header__nav">
-        <a href ="javascript:void(0)" class="header__nav__link" to="/">
-          HOME 
-        </a>
-        <a href ="javascript:void(0)" class="header__nav__link" to="/contact">
-          ABOUT US 
-        </a>
-        <a href ="javascript:void(0)" class="header__nav__link" to="/LoginandRegister">
-          Login/Register
-        </a>
-      </nav>
-    </header>
-    <div class="content">
-      <h2 class="content__heading">WHAT IS DOPAMINE?.</h2>
-      <hr class="content__separator" />
-      <div class="cont-container">
-        <div class="img-container"><img src="./images/2.jpeg"  height="238"></div>
-        <div class="img-text-container">
-          <p>Dopamine is a type of neurotransmitter, which is a chemical messenger that transmits signals in the brain and other areas of the nervous system. It plays a crucial role in various functions, including movement, motivation, reward, and the regulation of mood. Dopamine is produced in several areas of the brain, particularly in the substantia nigra and the ventral tegmental area</p>
-        </div>
-      </div>
-      <div class="cont-container space-top">
-        <div class="img-with-text">
-          <img src="./images/1.jpeg"  height="238">
-          <h3>effects of dopamine</h3>
-          <ul>
-            <li>Hormonal Imbalances</li>
-            <li>Sleep Disturbances</li>
-            <li>Blood Flow Issues</li>
-            <li>Addiction Vulnerability</li>
-            <li>Mood Disorders</li>
-          </ul>
-          <p> </p>
-        </div>
-        <div class="img-with-text">
-          <img src="./images/3.jpeg" width="341" height="238">
-          <h3>benefits of having good dopamine</h3>
-          <ul>
-            <li>Positive Mood</li>
-            <li>Motivation and Reward</li>
-            <li>Cognitive Function</li>
-            <li>Hormonal Balance</li>
-            <li>Resilience to Addiction</li>
-            <li>Healthy Blood Flow</li>
-          </ul>
-          </div>
-        <div class="img-with-text">
-          <img src="./images/4.jpeg" width="341" height="238">
-          <h3>how does dopamine kick in</h3>
-          <ul>
-            <li>Stimulus: Triggers the process
-            </li>
-            <li>Neural Signaling: Activation of neurons</li>
-            <li>Dopamine Release: From neurons to synapses.</li>
-            <li>Receptor Activation: Binding to specific receptors</li>
-            <li>Signal Transmission: Intracellular events triggered</li>
-            <li>Reward and Reinforcement: Associated with pleasure and motivatio</li>
-          </ul>
-        </div>
-      </div>
-      
     </div>
-    <div class="cont-container space-top content-bg">
-      <div class="bg-content">
-        <div class="img-with-text2"><h3>what we are trying to do</h3><p>We provide with preliminary test for dopamine calculation in everyday user life. further we are here to develop our idea into a generative AI model in the near future our model shall be of major use in food and medical industry.</p></div>
-        <div class="img-with-text2"><h3>how we are efficient</h3><p>We are the only one in the market providing happening solutions to dopamine causing daily health hazards and also the good part of the dopamine. Anything can be achieved with mindfulness and our daily life isnt based on it. Our model provides solution to be mindful and recognise the dopamine causing surge and also give in ideas to make life better and healthier.
-        </p></div>
-        <div class="img-with-text2"><h3>what is our next update</h3><p>We are trying to bring in awareness for the dopamine urge or surge in our daily livelihood.Our next update is to train our working model into a better solution providing user interface. Shortly we will also be deploying our own “The happiness company” application with the latest technology of AI.
-        </p></div>
+    <nav class="header__nav">
+      <a href="javascript:void(0)" class="header__nav__link" to="/">
+        HOME
+      </a>
+      <a href="javascript:void(0)" class="header__nav__link" to="/contact">
+        ABOUT US
+      </a>
+      <a href="javascript:void(0)" class="header__nav__link" to="/LoginandRegister">
+        Login/Register
+      </a>
+    </nav>
+  </header>
+  <div class="content">
+    <h2 class="content__heading">WHAT IS DOPAMINE?.</h2>
+    <hr class="content__separator" />
+    <div class="cont-container">
+      <div class="img-container"><img src="./images/2.jpeg" height="238"></div>
+      <div class="img-text-container">
+        <p>Dopamine is a type of neurotransmitter, which is a chemical messenger that transmits signals in the brain and
+          other areas of the nervous system. It plays a crucial role in various functions, including movement,
+          motivation, reward, and the regulation of mood. Dopamine is produced in several areas of the brain,
+          particularly in the substantia nigra and the ventral tegmental area</p>
       </div>
+    </div>
+    <div class="cont-container space-top">
+      <div class="img-with-text">
+        <img src="./images/1.jpeg" height="238">
+        <h3>effects of dopamine</h3>
+        <ul>
+          <li>Hormonal Imbalances</li>
+          <li>Sleep Disturbances</li>
+          <li>Blood Flow Issues</li>
+          <li>Addiction Vulnerability</li>
+          <li>Mood Disorders</li>
+        </ul>
+        <p> </p>
       </div>
-    <script
-      data-section-id="navbar"
-      src="https://unpkg.com/@teleporthq/teleport-custom-scripts"
-    ></script>
-    <style>
-      body{
-        font-family: math;
-      }
-      img{
-        width: 100%;
-      }
-      .header__nav{
-        text-align: center;
-        width: 65%;
-        z-index: 1;
-        /* background: linear-gradient(109.5deg, rgb(76, 221, 242) 11.2%, rgb(92, 121, 255) 91.1%); */
-        background: linear-gradient(109.5deg, rgb(45 48 48) 11.2%, rgb(57 59 66) 91.1%);
-        position: absolute;
-        top: 89%;
-        left: 19%;
-        height: 90px;
-        line-height: 90px;
-      }
-      .header__title {
-        color: goldenrod;
-      }
-      .header__nav {
-        display: flex;
-        justify-content: space-evenly;
-      }
-      .header__nav__link {
-        text-decoration: none;
-        color: white;
-      }
-      .banner-img{
-        /* background: radial-gradient(919px at 1.7% 6.1%, rgb(41, 58, 76) 0%, rgb(40, 171, 226) 100.2%); */
-        background: radial-gradient(919px at 1.7% 6.1%, rgb(49 68 88) 0%, rgb(40 47 50) 100.2%);
-    /* width: 100%; */
-    /* height: 425px; */
-    width: 100%;
-    height: 320px;
-    background-position: center;
-    background-attachment: fixed;
-      }
-      .header{
-        position: relative;
-      }
-      .title-1{
-        font-size: 35px;
-        color: #fff;
-      }
-      .title-2{
-        font-size: 39px;
-        color: #fff;
-        letter-spacing: 1px;
-        margin-top: 15px;
-      }
-      .title-container{
-        padding-top: 130px;
-        text-align: center;
-        letter-spacing: 1px;
-      }
-      .btn{
-        background: #fff;
-        padding-top: 10px;
-        padding-bottom: 10px;
-        padding-left: 50px;
-        padding-right: 50px;
-        margin-top: 16px;
-        border-radius: 50px;
-        color: lightblue;
-      }
-      .logo-img{
-        margin: 5px;
-        position: absolute;
-        text-align: center;
-        left: 19%;
-        line-height: 45px;
-        color: #fff;
-      }
-      .contact-numbers{
-        position: absolute;
-    right: 18%;
-    top: 20px;
-    color: #fff;
-    font-size: 10px;
-    font-weight: bold
-      }
-      .line{
-        width: 65%;
-          height: 1px;
-          background: #fff;
-          position: absolute;
-          top: 80px;
-          left: 19%;
-          opacity: 0.3;
-      }
-      .content {
-  padding: 5rem 9rem;
-}
-.content__heading {
-  text-align: center;
-  margin-bottom: 1rem;
-  color: #1550bd;
-  font-weight: bold;
-  margin-top: 0;
-  margin-bottom: -10px;
-}
-.content__separator {
-  border-color: gray;
-  margin-bottom: 1rem;
-}
-.img-container,
-.img-text-container{
-    border: 1px solid #ccc;
-    width: 49%;
-    height: 240px;
-    float: left;
-    margin: 5px;
-    text-align: center;
-}
-.img-text-container p{
-    padding: 30px;
-    text-align: left;
-    font-size: 18px;
-}
-.cont-container{
-  clear: both;
-}
-.img-with-text{
-  border: 1px solid #ccc;
-    width: 32.3%;
-    float: left;
-    margin: 5px;
-    text-align: center;
-    height: 495px;
-}
-.img-with-text2{
-    border: 6px solid #ebeaea;
-    width: 32.3%;
-    float: left;
-    margin: 5px;
-    text-align: center;
-    height: 285px;
-    padding: 2px;
-}
-.img-with-text ul{
-  list-style-type: none;
-    margin: 0;
-    padding: 0;
-}
-.img-with-text ul li{
-  margin-bottom: 10px;
-    text-align: left;
-    font-size: 14px;
-    padding-left: 20px;
-}
-.img-with-text h3{
-  margin-bottom: 10px;
-    font-weight: bold;
-    text-align: left;
-    text-transform: uppercase;
-    font-size: 16px;
-    margin-top: 10px;
-    padding-left: 20px;
-    color: #246ddb;
-}
-.img-with-text2 h3{
-  margin-bottom: 10px;
-    font-weight: bold;
-    text-align: left;
-    text-transform: uppercase;
-    font-size: 16px;
-    margin-top: 10px;
-    padding-left: 20px;
-    color: hsl(157, 72%, 50%);
-}
-.img-with-text2 p{
-  font-size: 17px;
-  text-align: left;
-  padding-left: 20px;
-  color: #fff;
-}
-.space-top{
-  padding-top: 10px;
-  padding-bottom: 10px;
-}
-.content-bg{
-  /* background: radial-gradient(919px at 1.7% 6.1%, rgb(41, 58, 76) 0%, rgb(40, 171, 226) 100.2%); */
-  background: radial-gradient(919px at 1.7% 6.1%, rgb(54 54 54) 0%, rgb(14 37 46) 100.2%);
-  height: 350px;
-  padding-top: 25px;
-}
-.bg-content{
-  padding: 0 9rem;
-}
-</style>
-  </body>
+      <div class="img-with-text">
+        <img src="./images/3.jpeg" width="341" height="238">
+        <h3>benefits of having good dopamine</h3>
+        <ul>
+          <li>Positive Mood</li>
+          <li>Motivation and Reward</li>
+          <li>Cognitive Function</li>
+          <li>Hormonal Balance</li>
+          <li>Resilience to Addiction</li>
+          <li>Healthy Blood Flow</li>
+        </ul>
+      </div>
+      <div class="img-with-text">
+        <img src="./images/4.jpeg" width="341" height="238">
+        <h3>how does dopamine kick in</h3>
+        <ul>
+          <li>Stimulus: Triggers the process
+          </li>
+          <li>Neural Signaling: Activation of neurons</li>
+          <li>Dopamine Release: From neurons to synapses.</li>
+          <li>Receptor Activation: Binding to specific receptors</li>
+          <li>Signal Transmission: Intracellular events triggered</li>
+          <li>Reward and Reinforcement: Associated with pleasure and motivatio</li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+  <div class="cont-container space-top content-bg">
+    <div class="bg-content">
+      <div class="img-with-text2">
+        <h3>what we are trying to do</h3>
+        <p>We provide with preliminary test for dopamine calculation in everyday user life. further we are here to
+          develop our idea into a generative AI model in the near future our model shall be of major use in food and
+          medical industry.</p>
+      </div>
+      <div class="img-with-text2">
+        <h3>how we are efficient</h3>
+        <p>We are the only one in the market providing happening solutions to dopamine causing daily health hazards and
+          also the good part of the dopamine. Anything can be achieved with mindfulness and our daily life isnt based on
+          it. Our model provides solution to be mindful and recognise the dopamine causing surge and also give in ideas
+          to make life better and healthier.
+        </p>
+      </div>
+      <div class="img-with-text2">
+        <h3>what is our next update</h3>
+        <p>We are trying to bring in awareness for the dopamine urge or surge in our daily livelihood.Our next update is
+          to train our working model into a better solution providing user interface. Shortly we will also be deploying
+          our own “The happiness company” application with the latest technology of AI.
+        </p>
+      </div>
+    </div>
+  </div>
+</body>
+
 </html>
